@@ -13,26 +13,7 @@ const Footer = () => {
           height={30}
         />
       </a>
-      <div className="flex items-center gap-3">
-        <Link href={"https://x.com/nutlope"} target="_blank">
-          <Image
-            unoptimized
-            src="/twitter.svg"
-            alt="twitter"
-            width={15}
-            height={15}
-          />
-        </Link>
-        <Link href={"https://github.com/Nutlope/llamatutor"} target="_blank">
-          <Image
-            unoptimized
-            src={"/github.svg"}
-            alt="facebook"
-            width={16}
-            height={16}
-          />{" "}
-        </Link>
-      </div>
+      
     </div>
   );
 };
