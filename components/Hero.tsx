@@ -44,12 +44,14 @@ const Hero: FC<THeroProps> = ({
         <h2 className="mt-2 bg-custom-gradient bg-clip-text text-center text-4xl font-medium tracking-tight text-gray-900 sm:text-6xl">
           Welcome to{" "}
           <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text font-bold text-transparent">
-            Alkebu AI Tutor
+            Alkebulanz
           </span>
         </h2>
 
-        <p className="mt-4 text-center text-sm sm:text-base">
-          Get personalized lessons on any topic — built to match your learning level and pace.
+        <p className="mt-4 text-center text-sm sm:text-base leading-relaxed">
+          I'm your AI tutor from Alkebulanz — here to make learning simpler and smarter. <br />
+          Whether you're curious about physics, grammar, or anything in between, I'm here to guide you. <br />
+          What can I help you learn today?
         </p>
 
         <div className="mt-4 w-full pb-6">
@@ -85,12 +87,12 @@ const Hero: FC<THeroProps> = ({
       <div className="mx-auto max-w-7xl">
         <Image
           src={desktopImg}
-          alt="Alkebu AI Tutor preview desktop"
+          alt="Alkebulanz Tutor preview desktop"
           className="my-32 max-w-full max-lg:hidden"
         />
         <Image
           src={mobileImg}
-          alt="Alkebu AI Tutor preview mobile"
+          alt="Alkebulanz Tutor preview mobile"
           className="my-5 max-w-full lg:hidden"
         />
       </div>
