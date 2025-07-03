@@ -7,7 +7,7 @@ import bgImage from "../public/new-bg.png";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-let title = "Llama Tutor – AI Personal Tutor";
+let title = "Alkebulanz Tutor – AI Personal Tutor";
 let description = "Learn faster with our open source AI personal tutor";
 let url = "https://llamatutor.com/";
 let ogimage = "https://llamatutor.together.ai/og-image.png";
