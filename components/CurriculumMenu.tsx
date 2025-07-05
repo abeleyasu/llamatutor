@@ -32,7 +32,7 @@ export default function CurriculumMenu({
           </div>
 
           {openGrade === grade.grade && (
-            <div className="absolute z-10 mt-2 w-56 rounded bg-white p-2 shadow-md max-h-96 overflow-y-auto">
+            <div className="absolute z-10 mt-2 w-56 rounded bg-white p-2 shadow-md max-h-500 overflow-y-auto">
               {grade.subjects.map((subject) => (
                 <div key={subject.name} className="relative">
                   <div
@@ -47,7 +47,7 @@ export default function CurriculumMenu({
                   </div>
 
                   {openSubject === subject.name && (
-                    <div className="absolute left-full top-0 z-20 ml-2 w-64 rounded bg-white p-2 shadow-md max-h-96 overflow-y-auto">
+                    <div className="absolute left-full top-0 z-20 ml-2 w-500 rounded bg-white p-2 shadow-md max-h-500 overflow-y-auto">
                       {subject.units.map((unit) => (
                         <div key={unit.unit} className="relative">
                           <div
@@ -60,7 +60,7 @@ export default function CurriculumMenu({
                           </div>
 
                           {openUnit === unit.unit && (
-                            <div className="absolute left-full top-0 z-30 ml-2 w-64 rounded bg-white p-2 shadow-md max-h-96 overflow-y-auto">
+                            <div className="absolute left-full top-0 z-30 ml-2 w-500 rounded bg-white p-2 shadow-md max-h-500 overflow-y-auto">
                               {unit.subunits.map((sub, idx) => (
                                 <div
                                   key={idx}
