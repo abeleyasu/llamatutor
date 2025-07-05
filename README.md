@@ -1,6 +1,6 @@
 <a href="https://www.llamatutor.com">
   <img alt="Llama Tutor" src="./public/desktop-screenshot.png">
-  <h1 align="center">Llama Tutor</h1>
+  <h1 align="center">Alkebulanz Tutor</h1>
 </a>
 
 <p align="center">
