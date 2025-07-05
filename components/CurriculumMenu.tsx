@@ -11,7 +11,7 @@ export default function CurriculumMenu({
   const [openSubject, setOpenSubject] = useState<string | null>(null);
   const [openUnit, setOpenUnit] = useState<string | null>(null);
 
-  const handlePromptSelection = (value: string) => {
+  const handlePrompt = (value: string) => {
     setPromptValue(value);
     setOpenGrade(null);
     setOpenSubject(null);
@@ -19,20 +19,20 @@ export default function CurriculumMenu({
   };
 
   return (
-    <div className="flex flex-wrap justify-center gap-4 py-4">
+    <div className="flex flex-wrap justify-center gap-4 py-4 w-full">
       {curriculumData.map((grade) => (
         <div key={grade.grade} className="relative">
           <div
             onClick={() =>
               setOpenGrade(openGrade === grade.grade ? null : grade.grade)
             }
-            className="cursor-pointer rounded bg-blue-100 px-3 py-1 hover:bg-blue-200"
+            className="cursor-pointer rounded bg-blue-100 px-4 py-2 hover:bg-blue-200"
           >
             {grade.grade}
           </div>
 
           {openGrade === grade.grade && (
-            <div className="absolute z-10 mt-2 w-56 rounded bg-white p-2 shadow-md max-h-500 overflow-y-auto">
+            <div className="absolute z-10 mt-2 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl rounded bg-white p-4 shadow-md">
               {grade.subjects.map((subject) => (
                 <div key={subject.name} className="relative">
                   <div
@@ -41,31 +41,29 @@ export default function CurriculumMenu({
                         openSubject === subject.name ? null : subject.name
                       )
                     }
-                    className="cursor-pointer rounded px-2 py-1 hover:bg-gray-100"
+                    className="cursor-pointer rounded px-3 py-2 font-medium hover:bg-gray-100"
                   >
                     {subject.name}
                   </div>
 
                   {openSubject === subject.name && (
-                    <div className="absolute left-full top-0 z-20 ml-2 w-500 rounded bg-white p-2 shadow-md max-h-500 overflow-y-auto">
+                    <div className="pl-4">
                       {subject.units.map((unit) => (
                         <div key={unit.unit} className="relative">
                           <div
-                            onClick={() =>
-                              setOpenUnit(openUnit === unit.unit ? null : unit.unit)
-                            }
-                            className="cursor-pointer rounded px-2 py-1 hover:bg-blue-100"
+                            onClick={() => handlePrompt(unit.unit)}
+                            className="cursor-pointer rounded px-3 py-1 text-blue-800 hover:bg-blue-50"
                           >
                             {unit.unit}
                           </div>
 
-                          {openUnit === unit.unit && (
-                            <div className="absolute left-full top-0 z-30 ml-2 w-500 rounded bg-white p-2 shadow-md max-h-500 overflow-y-auto">
+                          {unit.subunits.length > 0 && (
+                            <div className="pl-4">
                               {unit.subunits.map((sub, idx) => (
                                 <div
                                   key={idx}
-                                  className="cursor-pointer px-2 py-1 text-sm text-gray-600 hover:bg-blue-50"
-                                  onClick={() => handlePromptSelection(sub)} // ✅ Inject sub-unit
+                                  onClick={() => handlePrompt(sub)}
+                                  className="cursor-pointer px-3 py-1 text-sm text-gray-700 hover:bg-blue-100"
                                 >
                                   {sub}
                                 </div>
