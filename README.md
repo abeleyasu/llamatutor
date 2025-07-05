@@ -1,5 +1,5 @@
 <a href="https://www.llamatutor.com">
-  <img alt="Llama Tutor" src="./public/og-image.png">
+  <img alt="Llama Tutor" src="./public/desktop-screenshot.png">
   <h1 align="center">Llama Tutor</h1>
 </a>
 
