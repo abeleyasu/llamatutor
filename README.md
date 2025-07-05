@@ -8,7 +8,7 @@ Inteligent Tutor for Ethiopian Students </p>
 
 ## Tech stack
 
-- Llama 3.1 70B from Meta for the LLM
+- Meta for the LLM
 - Next.js app router with Tailwind
 - Serper for the search API
 - Helicone for observability
