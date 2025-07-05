@@ -3,6 +3,7 @@ import { FC } from "react";
 import desktopImg from "../public/desktop-screenshot.png";
 import mobileImg from "../public/screenshot-mobile.png";
 import InitialInputArea from "./InitialInputArea";
+import CurriculumMenu from "./CurriculumMenu";
 
 type THeroProps = {
   promptValue: string;
@@ -13,13 +14,6 @@ type THeroProps = {
   handleInitialChat: () => void;
 };
 
-const suggestions = [
-  { id: 1, name: "Force", icon: "/finance.svg" },
-  { id: 2, name: "Calculus", icon: "/finance.svg" },
-  { id: 3, name: "Grammar", icon: "/finance.svg" },
-  { id: 4, name: "History", icon: "/finance.svg" },
-];
-
 const Hero: FC<THeroProps> = ({
   promptValue,
   setPromptValue,
@@ -28,10 +22,6 @@ const Hero: FC<THeroProps> = ({
   setAgeGroup,
   handleInitialChat,
 }) => {
-  const handleClickSuggestion = (value: string) => {
-    setPromptValue(value);
-  };
-
   return (
     <>
       <div className="mx-auto mt-10 flex max-w-3xl flex-col items-center justify-center sm:mt-36">
@@ -61,24 +51,7 @@ const Hero: FC<THeroProps> = ({
             ageGroup={ageGroup}
             setAgeGroup={setAgeGroup}
           />
-        </div>
-
-        <div className="flex flex-wrap items-center justify-center gap-2.5 pb-[30px]">
-          {suggestions.map((item) => (
-            <div
-              key={item.id}
-              onClick={() => handleClickSuggestion(item.name)}
-              className="flex h-[35px] cursor-pointer items-center gap-[5px] rounded border border-gray-300 px-3 py-1.5 transition hover:bg-gray-200"
-            >
-              <Image
-                src={item.icon}
-                alt={item.name}
-                width={18}
-                height={16}
-              />
-              <span className="text-sm text-[#1B1B16]">{item.name}</span>
-            </div>
-          ))}
+          <CurriculumMenu setPromptValue={setPromptValue} />
         </div>
       </div>
 
